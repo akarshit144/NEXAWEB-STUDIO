@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: #000;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  color: gold;
+}
+
+.logo span {
+  color: #fff;
+}
+
+.navbar a {
+  color: #ccc;
+  margin-left: 25px;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 42px;
+  color: gold;
+}
+
+.hero p {
+  margin: 15px 0 30px;
+  color: #bbb;
+}
+
+.btn {
+  padding: 12px 30px;
+  border: 1px solid gold;
+  color: gold;
+  text-decoration: none;
+}
+
+.section {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 25px;
+  border: 1px solid gold;
+}
+
+.dark {
+  background: #111;
+}
+
+.gold {
+  color: gold;
+}
+
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.price-card {
+  border: 1px solid gold;
+  padding: 30px;
+}
+
+.highlight {
+  background: gold;
+  color: #000;
+}
+
+.price {
+  font-size: 26px;
+  margin: 15px 0;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #000;
+  color: #777;
+}
