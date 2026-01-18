@@ -1,112 +1,171 @@
+/* Google Fonts already linked */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #000;
-  color: #fff;
+  background: #0b0b0b;
+  color: #ffffff;
+  line-height: 1.6;
 }
 
+/* ===== NAVBAR ===== */
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px 60px;
-  background: #000;
+  align-items: center;
+  padding: 20px 8%;
+  background: rgba(0,0,0,0.85);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
-  font-family: 'Playfair Display', serif;
-  color: gold;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .logo span {
-  color: #fff;
+  color: gold;
 }
 
-.navbar a {
-  color: #ccc;
+.navbar nav a {
   margin-left: 25px;
   text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
 }
 
+.navbar nav a:hover {
+  color: gold;
+}
+
+/* ===== HERO ===== */
 .hero {
-  padding: 120px 20px;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 0 10%;
 }
 
 .hero h2 {
-  font-size: 42px;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero span {
   color: gold;
 }
 
 .hero p {
-  margin: 15px 0 30px;
-  color: #bbb;
+  max-width: 600px;
+  margin: auto;
+  opacity: 0.85;
 }
 
+/* ===== BUTTON ===== */
 .btn {
-  padding: 12px 30px;
-  border: 1px solid gold;
-  color: gold;
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 32px;
+  border-radius: 30px;
+  background: linear-gradient(45deg, gold, orange);
+  color: black;
+  font-weight: 600;
   text-decoration: none;
+  transition: 0.3s;
 }
 
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* ===== SECTIONS ===== */
 .section {
-  padding: 80px 60px;
-  text-align: center;
+  padding: 80px 8%;
 }
 
 .section-title {
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  padding: 25px;
-  border: 1px solid gold;
-}
-
-.dark {
-  background: #111;
-}
-
-.gold {
-  color: gold;
-}
-
-.pricing {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
-}
-
-.price-card {
-  border: 1px solid gold;
-  padding: 30px;
-}
-
-.highlight {
-  background: gold;
-  color: #000;
-}
-
-.price {
-  font-size: 26px;
-  margin: 15px 0;
-}
-
-footer {
-  padding: 20px;
   text-align: center;
-  background: #000;
-  color: #777;
+  font-size: 36px;
+  margin-bottom: 50px;
 }
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: gold;
+  margin: 10px auto;
+}
+
+/* ===== SERVICES ===== */
+.services-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.service {
+  background: #151515;
+  padding: 30px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+  border: 1px solid gold;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  color: gold;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 34px;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar nav {
+    margin-top: 10px;
+    .hero h2 {
+  animation: fadeDown 1.2s ease;
+}
+
+.hero p {
+  animation: fadeUp 1.5s ease;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+  }
+}
+
+
